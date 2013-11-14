@@ -1,1 +1,13 @@
 /* CSS declarations go here */
+#cube { background: #eee; }
+.cubetable {
+  border-spacing: 2px;
+}
+.cuberow {
+
+}
+.cubefacelet {
+  height: 40px;
+  width: 40px;
+}
+.red { background: #f00; }
