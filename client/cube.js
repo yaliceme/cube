@@ -154,3 +154,74 @@ Template.xPrimeButton.events({
     Meteor.call('moveL');
   }
 });
+
+//Keyboard shortcuts
+document.addEventListener('keydown', function(event) {
+    //standard moves
+    if(event.keyCode == 85) {
+        Meteor.call('moveU');
+    }
+    else if(event.keyCode == 68) {
+        Meteor.call('moveD');
+    }
+    else if(event.keyCode == 70) {
+        Meteor.call('moveF');
+    }
+    else if(event.keyCode == 66) {
+        Meteor.call('moveB');
+    }
+    else if(event.keyCode == 76) {
+        Meteor.call('moveL');
+    }
+    else if(event.keyCode == 82) {
+        Meteor.call('moveR');
+    }
+    //slice moves
+    if(event.keyCode == 83) {
+        Meteor.call('moveS');
+    }
+    else if(event.keyCode == 69) {
+        Meteor.call('moveE');
+    }
+    else if(event.keyCode == 77) {
+        Meteor.call('moveM');
+    }
+    //rotation
+    //up
+    else if(event.keyCode == 38) {
+        Meteor.call('moveR');
+        Meteor.call('moveMPrime');
+        Meteor.call('moveLPrime');
+    }
+    //down
+    else if(event.keyCode == 40) {
+        Meteor.call('moveRPrime');
+        Meteor.call('moveM');
+        Meteor.call('moveL');
+    }
+    //left
+    else if(event.keyCode == 37) {
+        Meteor.call('moveU');
+        Meteor.call('moveEPrime');
+        Meteor.call('moveDPrime');
+    }
+    //right
+    else if(event.keyCode == 39) {
+        Meteor.call('moveUPrime');
+        Meteor.call('moveE');
+        Meteor.call('moveD');
+    }
+    //shift
+    else if(event.keyCode == 16) {
+        Meteor.call('moveF');
+        Meteor.call('moveS');
+        Meteor.call('moveBPrime');
+    }
+    //alt
+    else if(event.keyCode == 18) {
+        Meteor.call('moveFPrime');
+        Meteor.call('moveSPrime');
+        Meteor.call('moveB');
+    }
+});
+
