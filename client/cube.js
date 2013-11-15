@@ -5,6 +5,8 @@ Template.cube.facelet = function(faceletID){
   return '';
 };
 
+//Call "move" Meteor.methods with you click buttons
+
 Template.uButton.events({
   'click input' : function () {
     Meteor.call('moveU');
@@ -17,18 +19,74 @@ Template.uPrimeButton.events({
   }
 });
 
+Template.dButton.events({
+  'click input' : function () {
+    Meteor.call('moveD');
+  }
+});
 
- //{{>uButton}}
- // {{>uPrimeButton}}<br>
- // {{>dButton}}
- // {{>dPrimeButton}}<br>
- // <br>
- // {{>fButton}}
- // {{>fPrimeButton}}<br>
- // {{>bButton}}
- // {{>bPrimeButton}}<br>
- // <br>
- // {{>lButton}}
- // {{>lPrimeButton}}<br>
- // {{>rButton}}
- // {{>rPrimeButton}}
+Template.dPrimeButton.events({
+  'click input' : function () {
+    Meteor.call('moveDPrime');
+  }
+});
+
+Template.eButton.events({
+  'click input' : function () {
+    Meteor.call('moveE');
+  }
+});
+
+Template.ePrimeButton.events({
+  'click input' : function () {
+    Meteor.call('moveEPrime');
+  }
+});
+
+Template.fButton.events({
+  'click input' : function () {
+    Meteor.call('moveF');
+  }
+});
+
+Template.fPrimeButton.events({
+  'click input' : function () {
+    Meteor.call('moveFPrime');
+  }
+});
+
+Template.bButton.events({
+  'click input' : function () {
+    Meteor.call('moveB');
+  }
+});
+
+Template.bPrimeButton.events({
+  'click input' : function () {
+    Meteor.call('moveBPrime');
+  }
+});
+
+Template.lButton.events({
+  'click input' : function () {
+    Meteor.call('moveL');
+  }
+});
+
+Template.lPrimeButton.events({
+  'click input' : function () {
+    Meteor.call('moveLPrime');
+  }
+});
+
+Template.rButton.events({
+  'click input' : function () {
+    Meteor.call('moveR');
+  }
+});
+
+Template.rPrimeButton.events({
+  'click input' : function () {
+    Meteor.call('moveRPrime');
+  }
+});
