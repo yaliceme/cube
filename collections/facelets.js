@@ -350,6 +350,60 @@ Meteor.methods({
   }
 });
 
+//Behavior for sButton click
+Meteor.methods({
+  moveS: function (){
+    var newColors = {};
+
+    newColors.luu = Facelets.findOne("dll").color;
+    newColors.u = Facelets.findOne("l").color;
+    newColors.ruu = Facelets.findOne("ull").color;
+
+    newColors.urr = Facelets.findOne("luu").color;
+    newColors.r = Facelets.findOne("u").color;
+    newColors.drr = Facelets.findOne("ruu").color;
+
+    newColors.rdd = Facelets.findOne("urr").color;
+    newColors.d = Facelets.findOne("r").color;
+    newColors.ldd = Facelets.findOne("drr").color;
+
+    newColors.dll = Facelets.findOne("rdd").color;
+    newColors.l = Facelets.findOne("d").color;
+    newColors.ull = Facelets.findOne("ldd").color;
+
+    _.each(newColors, function(color, faceletId){
+      Facelets.update(faceletId, {$set:{color:color}});
+    })
+  }
+});
+
+//Behavior for sPrimeButton click
+Meteor.methods({
+  moveSPrime: function (){
+    var newColors = {};
+
+    newColors.dll = Facelets.findOne("luu").color;
+    newColors.l = Facelets.findOne("u").color;
+    newColors.ull = Facelets.findOne("ruu").color;
+
+    newColors.luu = Facelets.findOne("urr").color;
+    newColors.u = Facelets.findOne("r").color;
+    newColors.ruu = Facelets.findOne("drr").color;
+
+    newColors.urr = Facelets.findOne("rdd").color;
+    newColors.r = Facelets.findOne("d").color;
+    newColors.drr = Facelets.findOne("ldd").color;
+
+    newColors.rdd = Facelets.findOne("dll").color;
+    newColors.d = Facelets.findOne("l").color;
+    newColors.ldd = Facelets.findOne("ull").color;
+
+    _.each(newColors, function(color, faceletId){
+      Facelets.update(faceletId, {$set:{color:color}});
+    })
+  }
+});
+
 //Behavior for lButton click
 Meteor.methods({
   moveL: function (){
@@ -498,11 +552,56 @@ Meteor.methods({
   }
 });
 
- // {{>fPrimeButton}}<br>
- // {{>bButton}}
- // {{>bPrimeButton}}<br>
- // <br>
- // {{>lButton}}
- // {{>lPrimeButton}}<br>
- // {{>rButton}}
- // {{>rPrimeButton}}
+//Behavior for mButton click
+Meteor.methods({
+  moveM: function (){
+    var newColors = {};
+
+    newColors.buu = Facelets.findOne("dbb").color;
+    newColors.u = Facelets.findOne("b").color;
+    newColors.fuu = Facelets.findOne("ubb").color;
+
+    newColors.uff = Facelets.findOne("buu").color;
+    newColors.f = Facelets.findOne("u").color;
+    newColors.dff = Facelets.findOne("fuu").color;
+
+    newColors.fdd = Facelets.findOne("uff").color;
+    newColors.d = Facelets.findOne("f").color;
+    newColors.bdd = Facelets.findOne("dff").color;
+
+    newColors.dbb = Facelets.findOne("fdd").color;
+    newColors.b = Facelets.findOne("d").color;
+    newColors.ubb = Facelets.findOne("bdd").color;
+
+    _.each(newColors, function(color, faceletId){
+      Facelets.update(faceletId, {$set:{color:color}});
+    })
+  }
+});
+
+//Behavior for mPrimeButton click
+Meteor.methods({
+  moveMPrime: function (){
+    var newColors = {};
+
+    newColors.dbb = Facelets.findOne("buu").color;
+    newColors.b = Facelets.findOne("u").color;
+    newColors.ubb = Facelets.findOne("fuu").color;
+
+    newColors.buu = Facelets.findOne("uff").color;
+    newColors.u = Facelets.findOne("f").color;
+    newColors.fuu = Facelets.findOne("dff").color;
+
+    newColors.uff = Facelets.findOne("fdd").color;
+    newColors.f = Facelets.findOne("d").color;
+    newColors.dff = Facelets.findOne("bdd").color;
+
+    newColors.fdd = Facelets.findOne("dbb").color;
+    newColors.d = Facelets.findOne("b").color;
+    newColors.bdd = Facelets.findOne("ubb").color;
+
+    _.each(newColors, function(color, faceletId){
+      Facelets.update(faceletId, {$set:{color:color}});
+    })
+  }
+});

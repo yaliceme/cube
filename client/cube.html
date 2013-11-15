@@ -14,13 +14,16 @@
   {{>fPrimeButton}}<br>
   {{>bButton}}
   {{>bPrimeButton}}<br>
+  {{>sButton}} {{>sPrimeButton}}<br>
   <br>
   {{>lButton}}
   {{>lPrimeButton}}<br>
   {{>rButton}}
-  {{>rPrimeButton}}
+  {{>rPrimeButton}}<br>
+  {{>mButton}} {{>mPrimeButton}}<br>
 </body>
 
+<!--Build cube using a table-->
 <template name="cube">
   <div id="cube">
 
@@ -270,18 +273,13 @@
   </table>
 </template>
 
+<!--Cube manipulation buttons-->
+<!--U  U'  D  D'  E  E'-->
 <template name="uButton">
     <input type="button" value="U" />
 </template>
 <template name="uPrimeButton">
     <input type="button" value="U'" />
-</template>
-
-<template name="eButton">
-    <input type="button" value="Equator (L-> R)" />
-</template>
-<template name="ePrimeButton">
-    <input type="button" value="E'" />
 </template>
 
 <template name="dButton">
@@ -291,6 +289,14 @@
     <input type="button" value="D'" />
 </template>
 
+<template name="eButton">
+    <input type="button" value="Equator (L-> R)" />
+</template>
+<template name="ePrimeButton">
+    <input type="button" value="E'" />
+</template>
+
+<!--F  F'  B  B'  S  S'-->
 <template name="fButton">
     <input type="button" value="F" />
 </template>
@@ -305,6 +311,14 @@
     <input type="button" value="B'" />
 </template>
 
+<template name="sButton">
+    <input type="button" value="Standing (Clockwise)" />
+</template>
+<template name="sPrimeButton">
+    <input type="button" value="S'" />
+</template>
+
+<!--L  L'  R  R'  M  M'-->
 <template name="lButton">
     <input type="button" value="L" />
 </template>
@@ -317,4 +331,11 @@
 </template>
 <template name="rPrimeButton">
     <input type="button" value="R'" />
+</template>
+
+<template name="mButton">
+    <input type="button" value="Middle (U-> D)" />
+</template>
+<template name="mPrimeButton">
+    <input type="button" value="M'" />
 </template>
