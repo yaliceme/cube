@@ -9,18 +9,21 @@
   {{>dButton}}
   {{>dPrimeButton}}<br>
   {{>eButton}} {{>ePrimeButton}}<br>
+  {{>yButton}} {{>yPrimeButton}}<br>
   <br>
   {{>fButton}}
   {{>fPrimeButton}}<br>
   {{>bButton}}
   {{>bPrimeButton}}<br>
   {{>sButton}} {{>sPrimeButton}}<br>
+  {{>zButton}} {{>zPrimeButton}}<br>
   <br>
   {{>lButton}}
   {{>lPrimeButton}}<br>
   {{>rButton}}
   {{>rPrimeButton}}<br>
   {{>mButton}} {{>mPrimeButton}}<br>
+  {{>xButton}} {{>xPrimeButton}}<br>
 </body>
 
 <!--Build cube using a table-->
@@ -274,7 +277,7 @@
 </template>
 
 <!--Cube manipulation buttons-->
-<!--U  U'  D  D'  E  E'-->
+<!--U  U'  D  D'  E  E'  Y  Y'-->
 <template name="uButton">
     <input type="button" value="U" />
 </template>
@@ -296,7 +299,14 @@
     <input type="button" value="E'" />
 </template>
 
-<!--F  F'  B  B'  S  S'-->
+<template name="yButton">
+    <input type="button" value="Rotate w/ U" />
+</template>
+<template name="yPrimeButton">
+    <input type="button" value="Rotate w/ U'" />
+</template>
+
+<!--F  F'  B  B'  S  S'  Z  Z'-->
 <template name="fButton">
     <input type="button" value="F" />
 </template>
@@ -318,7 +328,14 @@
     <input type="button" value="S'" />
 </template>
 
-<!--L  L'  R  R'  M  M'-->
+<template name="zButton">
+    <input type="button" value="Rotate w/ F" />
+</template>
+<template name="zPrimeButton">
+    <input type="button" value="Rotate w/ F'" />
+</template>
+
+<!--L  L'  R  R'  M  M'  X  X'-->
 <template name="lButton">
     <input type="button" value="L" />
 </template>
@@ -338,4 +355,11 @@
 </template>
 <template name="mPrimeButton">
     <input type="button" value="M'" />
+</template>
+
+<template name="xButton">
+    <input type="button" value="Rotate w/ R" />
+</template>
+<template name="xPrimeButton">
+    <input type="button" value="Rotate w/ R'" />
 </template>
