@@ -155,6 +155,12 @@ Template.xPrimeButton.events({
   }
 });
 
+Template.resetButton.events({
+  'click input' : function () {
+    Meteor.call('reset');
+  }
+});
+
 //Keyboard shortcuts
 document.addEventListener('keydown', function(event) {
     //standard moves
@@ -222,6 +228,10 @@ document.addEventListener('keydown', function(event) {
         Meteor.call('moveFPrime');
         Meteor.call('moveSPrime');
         Meteor.call('moveB');
+    }
+    //reset to solved - esc
+    else if(event.keyCode == 27) {
+        Meteor.call('reset');
     }
 });
 

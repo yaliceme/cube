@@ -605,3 +605,91 @@ Meteor.methods({
     })
   }
 });
+
+//Behavior for resetButton click
+Meteor.methods({
+  reset: function (){
+    var newColors = {};
+//Up resets to white
+    newColors.lbuu = "White";
+    newColors.buu = "White";
+    newColors.rbuu = "White";
+
+    newColors.luu = "White";
+    newColors.u = "White";
+    newColors.ruu = "White";
+
+    newColors.lfuu = "White";
+    newColors.fuu = "White";
+    newColors.fruu = "White";
+
+//Down resets to yellow
+    newColors.rbdd = "Yellow";
+    newColors.bdd = "Yellow";
+    newColors.bldd = "Yellow";
+
+    newColors.rdd = "Yellow";
+    newColors.d = "Yellow";
+    newColors.ldd = "Yellow";
+
+    newColors.frdd = "Yellow";
+    newColors.fdd = "Yellow";
+    newColors.lfdd = "Yellow";
+
+//Front resets to green
+    newColors.luff = "Green";
+    newColors.uff = "Green";
+    newColors.ruff = "Green";
+
+    newColors.lff = "Green";
+    newColors.f = "Green";
+    newColors.rff = "Green";
+
+    newColors.dlff = "Green";
+    newColors.dff = "Green";
+    newColors.drff = "Green";
+ 
+//Back resets to blue
+    newColors.ldbb = "Blue";
+    newColors.dbb = "Blue";
+    newColors.drbb = "Blue";
+
+    newColors.lbb = "Blue";
+    newColors.b = "Blue";
+    newColors.rbb = "Blue";
+
+    newColors.lubb = "Blue";
+    newColors.ubb = "Blue";
+    newColors.rubb = "Blue";
+
+//Left resets to orange
+    newColors.bdll = "Orange";
+    newColors.bll = "Orange";
+    newColors.bull = "Orange";
+
+    newColors.dll = "Orange";
+    newColors.l = "Orange";
+    newColors.ull = "Orange";
+
+    newColors.dfll = "Orange";
+    newColors.fll = "Orange";
+    newColors.full = "Orange";
+
+//Right resets to red
+    newColors.burr = "Red";
+    newColors.brr = "Red";
+    newColors.bdrr = "Red";
+
+    newColors.urr = "Red";
+    newColors.r = "Red";
+    newColors.drr = "Red";
+
+    newColors.furr = "Red";
+    newColors.frr = "Red";
+    newColors.fdrr = "Red";
+
+    _.each(newColors, function(color, faceletId){
+      Facelets.update(faceletId, {$set:{color:color}});
+    })
+  }
+});
