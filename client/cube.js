@@ -35,10 +35,24 @@ Template.eButton.events({
     Meteor.call('moveE');
   }
 });
-
 Template.ePrimeButton.events({
   'click input' : function () {
     Meteor.call('moveEPrime');
+  }
+});
+
+Template.yButton.events({
+  'click input' : function () {
+    Meteor.call('moveU');
+    Meteor.call('moveEPrime');
+    Meteor.call('moveDPrime');
+  }
+});
+Template.yPrimeButton.events({
+  'click input' : function () {
+    Meteor.call('moveUPrime');
+    Meteor.call('moveE');
+    Meteor.call('moveD');
   }
 });
 
@@ -76,6 +90,21 @@ Template.sPrimeButton.events({
   }
 });
 
+Template.zButton.events({
+  'click input' : function () {
+    Meteor.call('moveF');
+    Meteor.call('moveS');
+    Meteor.call('moveBPrime');
+  }
+});
+Template.zPrimeButton.events({
+  'click input' : function () {
+    Meteor.call('moveFPrime');
+    Meteor.call('moveSPrime');
+    Meteor.call('moveB');
+  }
+});
+
 //L  L'  R  R'  M  M'
 
 Template.lButton.events({
@@ -108,5 +137,20 @@ Template.mButton.events({
 Template.mPrimeButton.events({
   'click input' : function () {
     Meteor.call('moveMPrime');
+  }
+});
+
+Template.xButton.events({
+  'click input' : function () {
+    Meteor.call('moveR');
+    Meteor.call('moveMPrime');
+    Meteor.call('moveLPrime');
+  }
+});
+Template.xPrimeButton.events({
+  'click input' : function () {
+    Meteor.call('moveRPrime');
+    Meteor.call('moveM');
+    Meteor.call('moveL');
   }
 });
