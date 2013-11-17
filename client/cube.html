@@ -19,7 +19,7 @@
   <table class="cubetable">
     <!--blank row-->
     <tr class="cuberow">
-      <td class="buttonregion">{{>yButton}}</td>
+      <td class="buttonregion"></td>
       
       <td class="blank"></td>
       <td class="blank"></td>
@@ -41,7 +41,7 @@
     </tr>
     <!--row 1-->
     <tr class="cuberow">
-      <td class="buttonregion">{{>yPrimeButton}}</td>
+      <td class="buttonregion">{{>yButton}}{{>yPrimeButton}}</td>
 
       <td class="blank"></td>
       <td class="blank"></td>
@@ -174,7 +174,7 @@
     </tr>
     <!--row 7-->
     <tr class="cuberow">
-      <td class="buttonregion">{{>xButton}}</td>
+      <td class="buttonregion">{{>xButton}}{{>xPrimeButton}}</td>
       
       <td class="blank"></td>
       <td class="blank"></td>
@@ -196,7 +196,7 @@
     </tr>
     <!--row 8-->
     <tr class="cuberow">
-      <td class="buttonregion">{{>xPrimeButton}}</td>
+      <td class="buttonregion"></td>
       
       <td class="blank"></td>
       <td class="blank"></td>
@@ -218,9 +218,7 @@
     </tr>
     <!--row 9-->
     <tr class="cuberow">
-      <td class="buttonregion">
-        {{>zButton}}
-      </td>
+      <td class="buttonregion">{{>zButton}}{{>zPrimeButton}}</td>
       
       <td class="blank"></td>
       <td class="blank"></td>
@@ -242,7 +240,7 @@
     </tr>
     <!--blank row-->
     <tr class="cuberow">
-      <td class="buttonregion">{{>zPrimeButton}}</td>
+      <td class="buttonregion"></td>
       
       <td class="blank"></td>
       <td class="blank"></td>
@@ -268,24 +266,24 @@
 <!--Cube manipulation buttons-->
 <!--U  U'  D  D'  E  E'  Y  Y'-->
 <template name="uButton">
-    <input type="button" value="  U  " />
+    <input type="button" value=" U " />
 </template>
 <template name="uPrimeButton">
-    <input type="button" value="  U'  " />
+    <input type="button" value=" U' " />
 </template>
 
 <template name="dButton">
-    <input type="button" value="  D  " />
+    <input type="button" value=" D " />
 </template>
 <template name="dPrimeButton">
-    <input type="button" value="  D'  " />
+    <input type="button" value=" D' " />
 </template>
 
 <template name="eButton">
-    <input type="button" value="E (>)" />
+    <input type="button" value="E(>)" />
 </template>
 <template name="ePrimeButton">
-    <input type="button" value="(<) E'" style="float: right;"/>
+    <input type="button" value="(<)E'" style="float: right;"/>
 </template>
 
 <template name="yButton">
@@ -297,24 +295,24 @@
 
 <!--F  F'  B  B'  S  S'  Z  Z'-->
 <template name="fButton">
-    <input type="button" value="  F  " />
+    <input type="button" value=" F " />
 </template>
 <template name="fPrimeButton">
-    <input type="button" value="  F'  " />
+    <input type="button" value=" F' " />
 </template>
 
 <template name="bButton">
-    <input type="button" value="  B  " />
+    <input type="button" value=" B " />
 </template>
 <template name="bPrimeButton">
-    <input type="button" value="  B'  " />
+    <input type="button" value=" B' " />
 </template>
 
 <template name="sButton">
-    <input type="button" value="S (>)" />
+    <input type="button" value="S(>)" />
 </template>
 <template name="sPrimeButton">
-    <input type="button" value="(v) S'" />
+    <input type="button" value="(v)S'" />
 </template>
 
 <template name="zButton">
@@ -326,24 +324,24 @@
 
 <!--L  L'  R  R'  M  M'  X  X'-->
 <template name="lButton">
-    <input type="button" value="  L  " />
+    <input type="button" value=" L " />
 </template>
 <template name="lPrimeButton">
-    <input type="button" value="  L'  " />
+    <input type="button" value=" L' " />
 </template>
 
 <template name="rButton">
-    <input type="button" value="  R  " />
+    <input type="button" value=" R " />
 </template>
 <template name="rPrimeButton">
-    <input type="button" value="  R'  " />
+    <input type="button" value=" R' " />
 </template>
 
 <template name="mButton">
-    <input type="button" value="M (v)" />
+    <input type="button" value="M(v)" />
 </template>
 <template name="mPrimeButton">
-    <input type="button" value="M' (^)" />
+    <input type="button" value="M'(^)" />
 </template>
 
 <template name="xButton">
