@@ -7,6 +7,8 @@
   <a href="http://en.wikipedia.org/wiki/Rubik's_Cube#Move_notation" style="font-family: Helvetica Neue">Helpful info about cube notation!</a><br>
   {{>cube}}
   <br>
+  {{>resetButton}} <br>
+  <br>
   <a href="http://rubietysociety.com" style="font-family: Helvetica Neue">Learn how to solve a Rubik's cube!</a><br>
 </body>
 
@@ -17,14 +19,14 @@
   <table class="cubetable">
     <!--blank row-->
     <tr class="cuberow">
-      <td class="buttonregion"></td>
+      <td class="buttonregion">{{>yButton}}</td>
       
       <td class="blank"></td>
       <td class="blank"></td>
       <td class="blank"></td>
 
       <td class="blank"></td>
-      <td class="blank"></td>
+      <td class="blank">{{>mPrimeButton}}</td>
       <td class="blank"></td>
 
       <td class="blank"></td>
@@ -39,18 +41,15 @@
     </tr>
     <!--row 1-->
     <tr class="cuberow">
-      <td class="buttonregion">
-        {{>uButton}} {{>uPrimeButton}}
-        {{>dButton}} {{>dPrimeButton}}
-      </td>
+      <td class="buttonregion">{{>yPrimeButton}}</td>
 
       <td class="blank"></td>
       <td class="blank"></td>
       <td class="blank"></td>
 
-      <td class="cubefacelet {{facelet "lbuu"}}"></td>
+      <td class="cubefacelet {{facelet "lbuu"}}">{{>uPrimeButton}}</td>
       <td class="cubefacelet {{facelet "buu"}}"></td>
-      <td class="cubefacelet {{facelet "rbuu"}}"></td>
+      <td class="cubefacelet {{facelet "rbuu"}}">{{>uButton}} </td>
 
       <td class="blank"></td>
       <td class="blank"></td>
@@ -64,16 +63,14 @@
     </tr>
     <!--row 2-->
     <tr class="cuberow">
-      <td class="buttonregion">
-        {{>eButton}} {{>ePrimeButton}}
-      </td>
+      <td class="buttonregion"></td>
 
       <td class="blank"></td>
       <td class="blank"></td>
-      <td class="blank"></td>
+      <td class="blank">{{>sButton}}</td>
 
       <td class="cubefacelet {{facelet "luu"}}"></td>
-      <td class="cubefacelet {{facelet "u"}}"></td>
+      <td class="cubefacelet {{facelet "u"}}">Up</td>
       <td class="cubefacelet {{facelet "ruu"}}"></td>
 
       <td class="blank"></td>
@@ -88,12 +85,11 @@
     </tr>
     <!--row 3-->
     <tr class="cuberow">
-      <td class="buttonregion">
-        {{>yButton}} {{>yPrimeButton}}<br>
+      <td class="buttonregion"><br>
       </td>
       
       <td class="blank"></td>
-      <td class="blank"></td>
+      <td class="blank">{{>sPrimeButton}}</td>
       <td class="blank"></td>
 
       <td class="cubefacelet {{facelet "lfuu"}}"></td>
@@ -112,57 +108,51 @@
     </tr>
     <!--row 4-->
     <tr class="cuberow">
-      <td class="buttonregion">
-        {{>fButton}} {{>fPrimeButton}} {{>bButton}} {{>bPrimeButton}}<br>
-      </td>
+      <td class="buttonregion"></td>
       
-      <td class="cubefacelet {{facelet "bull"}}"></td>
+      <td class="cubefacelet {{facelet "bull"}}">{{>lPrimeButton}}</td>
       <td class="cubefacelet {{facelet "ull"}}"></td>
-      <td class="cubefacelet {{facelet "full"}}"></td>
+      <td class="cubefacelet {{facelet "full"}}">{{>lButton}}</td>
 
-      <td class="cubefacelet {{facelet "luff"}}"></td>
+      <td class="cubefacelet {{facelet "luff"}}">{{>fPrimeButton}}</td>
       <td class="cubefacelet {{facelet "uff"}}"></td>
-      <td class="cubefacelet {{facelet "ruff"}}"></td>
+      <td class="cubefacelet {{facelet "ruff"}}">{{>fButton}}</td>
 
-      <td class="cubefacelet {{facelet "furr"}}"></td>
+      <td class="cubefacelet {{facelet "furr"}}">{{>rPrimeButton}}</td>
       <td class="cubefacelet {{facelet "urr"}}"></td>
-      <td class="cubefacelet {{facelet "burr"}}"></td>
+      <td class="cubefacelet {{facelet "burr"}}">{{>rButton}}</td>
 
-      <td class="cubefacelet {{facelet "rubb"}}"></td>
+      <td class="cubefacelet {{facelet "rubb"}}">{{>bPrimeButton}}</td>
       <td class="cubefacelet {{facelet "ubb"}}"></td>
-      <td class="cubefacelet {{facelet "lubb"}}"></td>
+      <td class="cubefacelet {{facelet "lubb"}}">{{>bButton}}</td>
 
       <td class="blank"></td>
     </tr>
     <!--row 5-->
     <tr class="cuberow">
-      <td class="buttonregion">
-        {{>sButton}} {{>sPrimeButton}}
-      </td>
+      <td class="buttonregion">{{>ePrimeButton}}</td>
       
       <td class="cubefacelet {{facelet "bll"}}"></td>
-      <td class="cubefacelet {{facelet "l"}}"></td>
+      <td class="cubefacelet {{facelet "l"}}">Left</td>
       <td class="cubefacelet {{facelet "fll"}}"></td>
 
       <td class="cubefacelet {{facelet "lff"}}"></td>
-      <td class="cubefacelet {{facelet "f"}}"></td>
+      <td class="cubefacelet {{facelet "f"}}">Front</td>
       <td class="cubefacelet {{facelet "rff"}}"></td>
 
       <td class="cubefacelet {{facelet "frr"}}"></td>
-      <td class="cubefacelet {{facelet "r"}}"></td>
+      <td class="cubefacelet {{facelet "r"}}">Right</td>
       <td class="cubefacelet {{facelet "brr"}}"></td>
 
       <td class="cubefacelet {{facelet "rbb"}}"></td>
-      <td class="cubefacelet {{facelet "b"}}"></td>
+      <td class="cubefacelet {{facelet "b"}}">Back</td>
       <td class="cubefacelet {{facelet "lbb"}}"></td>
 
-      <td class="blank"></td>
+      <td class="blank">{{>eButton}}</td>
     </tr>
     <!--row 6-->
     <tr class="cuberow">
-      <td class="buttonregion">
-        {{>zButton}} {{>zPrimeButton}}
-      </td>
+      <td class="buttonregion"></td>
       
       <td class="cubefacelet {{facelet "bdll"}}"></td>
       <td class="cubefacelet {{facelet "dll"}}"></td>
@@ -184,17 +174,15 @@
     </tr>
     <!--row 7-->
     <tr class="cuberow">
-      <td class="buttonregion">
-        {{>lButton}} {{>lPrimeButton}} {{>rButton}} {{>rPrimeButton}}<br>
-      </td>
+      <td class="buttonregion">{{>xButton}}</td>
       
       <td class="blank"></td>
       <td class="blank"></td>
       <td class="blank"></td>
 
-      <td class="cubefacelet {{facelet "lfdd"}}"></td>
+      <td class="cubefacelet {{facelet "lfdd"}}">{{>dPrimeButton}}</td>
       <td class="cubefacelet {{facelet "fdd"}}"></td>
-      <td class="cubefacelet {{facelet "frdd"}}"></td>
+      <td class="cubefacelet {{facelet "frdd"}}">{{>dButton}}</td>
 
       <td class="blank"></td>
       <td class="blank"></td>
@@ -208,16 +196,14 @@
     </tr>
     <!--row 8-->
     <tr class="cuberow">
-      <td class="buttonregion">
-        {{>mButton}} {{>mPrimeButton}}
-      </td>
+      <td class="buttonregion">{{>xPrimeButton}}</td>
       
       <td class="blank"></td>
       <td class="blank"></td>
       <td class="blank"></td>
 
       <td class="cubefacelet {{facelet "ldd"}}"></td>
-      <td class="cubefacelet {{facelet "d"}}"></td>
+      <td class="cubefacelet {{facelet "d"}}">Down</td>
       <td class="cubefacelet {{facelet "rdd"}}"></td>
 
       <td class="blank"></td>
@@ -233,7 +219,7 @@
     <!--row 9-->
     <tr class="cuberow">
       <td class="buttonregion">
-        {{>xButton}} {{>xPrimeButton}}
+        {{>zButton}}
       </td>
       
       <td class="blank"></td>
@@ -256,16 +242,14 @@
     </tr>
     <!--blank row-->
     <tr class="cuberow">
-      <td class="buttonregion">
-        {{>resetButton}} <br>
-      </td>
+      <td class="buttonregion">{{>zPrimeButton}}</td>
       
       <td class="blank"></td>
       <td class="blank"></td>
       <td class="blank"></td>
 
       <td class="blank"></td>
-      <td class="blank"></td>
+      <td class="blank">{{>mButton}}</td>
       <td class="blank"></td>
 
       <td class="blank"></td>
@@ -298,10 +282,10 @@
 </template>
 
 <template name="eButton">
-    <input type="button" value="Equator (L-> R)" />
+    <input type="button" value="E (>)" />
 </template>
 <template name="ePrimeButton">
-    <input type="button" value="  E'  " />
+    <input type="button" value="(<) E'" style="float: right;"/>
 </template>
 
 <template name="yButton">
@@ -327,10 +311,10 @@
 </template>
 
 <template name="sButton">
-    <input type="button" value="Standing (Clockwise)" />
+    <input type="button" value="S (>)" />
 </template>
 <template name="sPrimeButton">
-    <input type="button" value="  S'  " />
+    <input type="button" value="(v) S'" />
 </template>
 
 <template name="zButton">
@@ -356,10 +340,10 @@
 </template>
 
 <template name="mButton">
-    <input type="button" value="Middle (U-> D)" />
+    <input type="button" value="M (v)" />
 </template>
 <template name="mPrimeButton">
-    <input type="button" value="  M'  " />
+    <input type="button" value="M' (^)" />
 </template>
 
 <template name="xButton">
