@@ -1,4 +1,6 @@
 /* CSS declarations go here */
+@cellheight: 40px;
+@cellwidth: 40px;
 
 #cube { background: #b4a294; }
 
@@ -8,13 +10,17 @@
 .cuberow {
 
 }
+.buttonregion {
+  height: @cellheight;
+  width: @cellwidth + @cellwidth + @cellwidth + @cellwidth + @cellwidth
+}
 .blank {
-  height: 40px;
-  width:40px;
+  height: @cellheight;
+  width: @cellwidth;
 }
 .cubefacelet {
-  height: 40px;
-  width: 40px;
+  height: @cellheight;
+  width: @cellwidth;
   background: #830367;
 }
 .Blue {
