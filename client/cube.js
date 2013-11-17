@@ -217,8 +217,8 @@ document.addEventListener('keydown', function(event) {
         Meteor.call('moveE');
         Meteor.call('moveD');
     }
-    //shift
-    else if(event.keyCode == 16) {
+    //slash
+    else if(event.keyCode == 191) {
         Meteor.call('moveF');
         Meteor.call('moveS');
         Meteor.call('moveBPrime');
