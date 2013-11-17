@@ -234,4 +234,3 @@ document.addEventListener('keydown', function(event) {
         Meteor.call('reset');
     }
 });
-
